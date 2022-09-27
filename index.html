@@ -24,9 +24,6 @@
       <img src="./images/bg-main-desktop.png" alt="background" class="background-img">
     </picture>
 
-    
-    
-
   </div>
 
   <main>
@@ -52,14 +49,14 @@
             </div>
            
 
-            <img src="./images/bg-card-front.png" alt="card front" class="card-img">
+            <!-- <img src="./images/bg-card-front.png" alt="card front" class="card-img"> -->
           </div>
           
           <div class="back">
             <span class="card-cvc">
               000
             </span>
-            <img src="./images/bg-card-back.png" alt="card back" class="card-img">
+             <!-- <img src="./images/bg-card-back.png" alt="card back" class="card-img">  -->
           </div>
           
         </div>
@@ -68,25 +65,21 @@
       </div>
 
       <div class="form-container">
-        <form>
-          <!-- 0000 0000 0000 0000
-        Jane Appleseed
-        00/00 -->
-
-        <!-- 000 -->
+        <form class="form-item">
+          
 
         <label for="name" class="form-label">CARDHOLDER NAME</label>
-        <input type="text" name="name" placeholder="Jane Appleseed" class="form-input">
-        <!-- e.g. Jane Appleseed -->
+        <input type="text" name="name" placeholder="e.g. Jane Appleseed" class="form-input" id="name-input">
+        <!--  -->
 
         <label for="card-number" class="form-label">CARD NUMBER</label>
-        <input type="number" name="card-number" placeholder="0000 0000 0000 0000" class="form-input">
+        <input type="text" name="card-number" placeholder="0000 0000 0000 0000" class="form-input" id="number-input">
 
         <div class="grid-2" style="max-width: 23rem;">
 
-          <div class="flex-col">
+          <div class="exp-cvc-left flex-col">
             <label class="form-label">EXP. DATE (MM/YY)</label>
-            <div class="grid-2">
+            <div class="grid-2" style="gap: .3rem;">
 
               <input type="number" placeholder="MM" class="form-input exp-input">
               <input type="number" placeholder="YY" class="form-input exp-input">
@@ -95,7 +88,7 @@
 
           </div>
 
-          <div class="flex-col">
+          <div class="exp-cvc flex-col">
 
             <label class="form-label">CVC</label>
             <input type="number" placeholder="e.g 123" class="form-input"> 
@@ -130,5 +123,7 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Haminimuri</a>.
   </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
