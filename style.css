@@ -5,6 +5,7 @@
 --light-grayish-violet: hsl(270, 3%, 87%);
 --dark-grayish-violet: hsl(279, 6%, 55%);
 --very-dark-violet: hsl(278, 68%, 11%);
+--error-red: hsl(0, 100%, 66%);
 font-size: 18px;
 --font-family: 'Space Grotesk', sans-serif;
 }
@@ -103,7 +104,7 @@ main{
     margin-bottom: 0.2rem;
     letter-spacing: 1px;
     color: var(--very-dark-violet);
-    
+    margin-top: 1rem;
 }
 
 .form-input{
@@ -111,8 +112,8 @@ main{
     border: 1px solid var(--light-grayish-violet);
     border-radius: 0.5rem;
     max-width: 23rem;
-    margin-bottom: 1rem;
-    font-size: 1rem;
+    /* margin-bottom: 1rem; */
+    font-size: .8rem;
     font-family: 'Space Grotesk', sans-serif;
     flex-shrink: 1;
     cursor: pointer;
@@ -120,7 +121,7 @@ main{
 
 .form-input:focus{
     outline: none;
-    border: double 1px transparent;
+    border: double 2px transparent;
   border-radius: .5rem;
   background-image: linear-gradient(white, white), radial-gradient(circle at top left, hsl(249, 99%, 64%), hsl(278, 94%, 30%));
   background-origin: border-box;
@@ -128,11 +129,17 @@ main{
 }
 
 .exp-input{
-    margin-right: 2.7rem;
+    margin-right: 3rem;
 }
 
 .form-input::placeholder{
     opacity: .5;
+}
+
+.error{
+    color: var(--error-red);
+    font-size: .6rem;
+    margin: 0;
 }
 
 .cards-wrapper{
@@ -184,6 +191,8 @@ main{
     margin-bottom: 4rem;
 }
 
+
+
 .card-number{
     font-size: 1.25rem;
     letter-spacing: 2px;
@@ -198,6 +207,7 @@ main{
 }
 
 .submit-btn{
+    margin-top: 1rem;
     background-color: var(--very-dark-violet);
     border: none;
     border-radius: .5rem;
@@ -216,6 +226,7 @@ main{
 .exp-cvc-left{
     margin-right: 1rem;
 }
+
 
 @media screen and (max-width:1024px) {
     
@@ -270,5 +281,7 @@ main{
         position: absolute;
         left: -2rem;
     }
+
+    
 
 }
