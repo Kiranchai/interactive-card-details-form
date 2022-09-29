@@ -1,6 +1,16 @@
 const numberInput = document.getElementById('number-input');
 const cardNumber = document.querySelector('.card-number');
+const nameInput = document.getElementById('name-input');
+const cardName = document.querySelector('.card-name');
+const cardMonth = document.querySelector('.card-month');
+const cardYear = document.querySelector('.card-year');
+const monthInput = document.getElementById('month-input');
+const yearInput = document.getElementById('year-input');
+const formContainer = document.querySelector('.form-container');
+const submitBtn = document.querySelector('.submit-btn');
 const everyInput = document.querySelectorAll('.form-input');
+const cvcInput = document.getElementById('cvc-input');
+const cardCvc = document.querySelector('.card-cvc');
 const lightGrayishVioletColor = 'hsl(270, 3%, 87%)';
 const errorColor = 'hsl(0, 100%, 66%)';
 
@@ -26,6 +36,15 @@ const createError = (body) =>{
 
 const isLastItemSpan = (input) => {
     return input.parentElement.lastChild.nodeName === 'SPAN' ? true : false;
+}
+
+const createCompletePopup = () => {
+    return `<div class="complete-container flex-col center">
+    <img src="./images/icon-complete.svg" alt="complete icon" class="complete-icon">
+    <h1 class="complete-header">THANK YOU!</h1>
+    <span class="complete-description">We've added your card details</span>
+    <button class="submit-btn">Continue</button>
+  </div>`;
 }
 
 everyInput.forEach(input => {
@@ -84,4 +103,43 @@ numberInput.addEventListener('keyup', e => {
         }
     }
     
+})
+
+nameInput.addEventListener('keyup', e => {
+    
+    cardName.textContent = e.target.value;
+    if(cardName.textContent.length === 0){
+        cardName.textContent = 'Jane Appleseed';
+    }
+})
+
+monthInput.addEventListener('keyup', e => {
+    
+    cardMonth.textContent = e.target.value
+    if(cardMonth.textContent.length === 0){
+        cardMonth.textContent = '00';
+    }
+})
+
+yearInput.addEventListener('keyup', e => {
+ 
+    cardYear.textContent = e.target.value
+    if(cardYear.textContent.length === 0){
+        cardYear.textContent = '00';
+    }
+})
+
+cvcInput.addEventListener('keyup', e => {
+ 
+    cardCvc.textContent = e.target.value
+    if(cardCvc.textContent.length === 0){
+        cardCvc.textContent = '000';
+    }
+})
+
+submitBtn.addEventListener('click', e => {
+    e.preventDefault();
+    let element = createCompletePopup();
+    formContainer.innerHTML = createCompletePopup();
+
 })

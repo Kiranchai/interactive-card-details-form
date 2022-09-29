@@ -44,7 +44,8 @@
               <span class="card-name">Jane Appleseed</span>
               <div class="card-exp flex">
                 <span class="card-month">00</span>
-                <span class="card-year">/00</span>
+                /
+                <span class="card-year">00</span>
               </div>
             </div>
            
@@ -88,11 +89,11 @@
             <label class="form-label">EXP. DATE (MM/YY)</label>
             <div class="grid-2" style="gap: .3rem;">
               <div class="input-container">
-                <input type="number" placeholder="MM" class="form-input exp-input" min="1" max="12">
+                <input type="number" placeholder="MM" class="form-input exp-input" min="1" max="12" id="month-input">
               </div>
               
               <div class="input-container">
-                <input type="number" placeholder="YY" class="form-input exp-input" min="2022" max="2035">
+                <input type="number" placeholder="YY" class="form-input exp-input" min="22" max="35" id="year-input">
               </div>
               
 
@@ -103,7 +104,10 @@
           <div class="exp-cvc flex-col">
 
             <label class="form-label">CVC</label>
-            <input type="number" placeholder="e.g 123" class="form-input"> 
+            <div class="input-container">
+              <input type="number" placeholder="e.g 123" class="form-input" id="cvc-input">
+            </div>
+             
 
           </div>
 
@@ -112,20 +116,11 @@
         
         <input type="submit" value="Confirm" class="submit-btn">
         </form>
+        
       </div>
       
 
-
-
     </section>
-
-    
-
-  <!-- Completed state start -->
-<!-- 
-  Thank you!
-  We've added your card details
-  Continue -->
 
 
   </main>
@@ -133,7 +128,7 @@
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Haminimuri</a>.
+    Coded by <a href="https://github.com/Kiranchai">Haminimuri</a>.
   </div>
 
   <script src="script.js"></script>
